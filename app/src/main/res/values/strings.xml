@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CHFSApp</string>
+
+    <string name="description">Description:</string>
+    <string name="barcode">Barcode:</string>
+    <string name="dateLastSold">Date Last Sold:</string>
+    <string name="price">Price:</string>
+    <string name="getDataBtn">Get Data</string>
+</resources>
