@@ -21,6 +21,8 @@ public class CHFSActivity extends AppCompatActivity {
 
     //Initialise visual components
     TextView descView, barcodeView, priceView, dateLastView;
+    TextView weekView1, weekView2, weekView3, weekView4, weekView5, weekView6;
+    TextView salesView1, salesView2, salesView3, salesView4, salesView5, salesView6;
     Button getDataButton;
     String infoResult;
 
@@ -50,10 +52,7 @@ public class CHFSActivity extends AppCompatActivity {
         salesFormatter = new SalesJSONFormat();
 
         //Setup textviews
-        descView = (TextView) findViewById(R.id.descView);
-        barcodeView = (TextView) findViewById(R.id.barcodeView);
-        priceView = (TextView) findViewById(R.id.priceView);
-        dateLastView = (TextView) findViewById(R.id.dateLastView);
+        setupTextViews();
 
         //Setup Button and listener
         getDataButton = (Button) findViewById(R.id.getDataBtn);
@@ -75,6 +74,15 @@ public class CHFSActivity extends AppCompatActivity {
 
     //Update information views
     public void updateInfoTextViews(ProductInfo prodInfo) {
+        //implement method to take info from a class and display
+        descView.setText(prodInfo.getDescription());
+        barcodeView.setText(prodInfo.getBarcode());
+        priceView.setText(prodInfo.getPrice());
+        dateLastView.setText(prodInfo.getDatelastsold());
+    }
+
+    //Update information views
+    public void updateSalesTextViews(SalesInfo[] salesInfoprodInfo) {
         //implement method to take info from a class and display
         descView.setText(prodInfo.getDescription());
         barcodeView.setText(prodInfo.getBarcode());
@@ -171,6 +179,30 @@ public class CHFSActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void setupTextViews() {
+        //Info
+        descView = (TextView) findViewById(R.id.descView);
+        barcodeView = (TextView) findViewById(R.id.barcodeView);
+        priceView = (TextView) findViewById(R.id.priceView);
+        dateLastView = (TextView) findViewById(R.id.dateLastView);
+
+        //Weeks
+        weekView1 = (TextView) findViewById(R.id.week1View);
+        weekView2 = (TextView) findViewById(R.id.week2View);
+        weekView3 = (TextView) findViewById(R.id.week3View);
+        weekView4 = (TextView) findViewById(R.id.week4View);
+        weekView5 = (TextView) findViewById(R.id.week5View);
+        weekView6 = (TextView) findViewById(R.id.week6View);
+
+        //Sales
+        salesView1 = (TextView) findViewById(R.id.sales1View);
+        salesView2 = (TextView) findViewById(R.id.sales2View);
+        salesView3 = (TextView) findViewById(R.id.sales3View);
+        salesView4 = (TextView) findViewById(R.id.sales4View);
+        salesView5 = (TextView) findViewById(R.id.sales5View);
+        salesView6 = (TextView) findViewById(R.id.sales6View);
     }
 
 }
