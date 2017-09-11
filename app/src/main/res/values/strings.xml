@@ -6,4 +6,7 @@
     <string name="dateLastSold">Date Last Sold:</string>
     <string name="price">Price:</string>
     <string name="getDataBtn">Get Data</string>
+
+    <string name="weekLabel">Week:</string>
+    <string name="salesLabel">Sales:</string>
 </resources>

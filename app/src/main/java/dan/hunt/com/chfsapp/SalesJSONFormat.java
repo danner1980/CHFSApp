@@ -10,7 +10,7 @@ import org.json.JSONObject;
  * Created by dan on 31/08/17.
  */
 
-public class JSONFormatter {
+public class SalesJSONFormat {
 
     SalesInfo[] salesInfo;
 
