@@ -46,10 +46,8 @@ public class CHFSActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Get data
-                infoResult = getWebservice();
+             getWebservice();
 
-                //Change textviews
-                descView.setText(infoResult);
             }
         });
 
@@ -62,7 +60,7 @@ public class CHFSActivity extends AppCompatActivity {
     }
 
     //Method to get the product info
-    private String getWebservice() {
+    private void getWebservice() {
         //Need to add String argument to the above method when active
 
         /*
@@ -94,15 +92,26 @@ public class CHFSActivity extends AppCompatActivity {
                     public void run() {
                         try {
                             infoResult = response.body().string();
+                            updateTextViews();
                         } catch (IOException ioe) {
                             infoResult = "Error during get body";
+                            updateTextViews();
                         }
                     }
                 });
             }
         });
-        return infoResult;
+
     }
 
+    //Method to update the textview
+    public void updateTextViews() {
+        descView.setText(infoResult);
+    }
+
+    //Update information views
+    public void updateInfoTextViews() {
+        //implement method to take info from a class and display
+    }
     //Method to get the sales info
 }
